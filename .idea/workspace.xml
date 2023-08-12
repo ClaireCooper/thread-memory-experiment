@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9e46e0-7d93-4f6a-b417-4859e9365a3c" name="Changes" comment="ACAD-1614 Create test routine to fill thread pool.">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="2a9e46e0-7d93-4f6a-b417-4859e9365a3c" name="Changes" comment="ACAD-1614 Edit Gradle to create and start the Docker container. Limit memory to 1GB.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/portswigger/academy/ThreadPoolExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/portswigger/academy/ThreadPoolExperiment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,12 +41,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ThreadPoolExperiment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.portswigger.academy.ThreadPoolExperiment" />
@@ -88,11 +84,29 @@
       <option name="project" value="LOCAL" />
       <updated>1691780731239</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ACAD-1614 Add fillHeap and fillStack methods.Change task to callable so can wait for all to finish before shutting down thread pool.">
+      <option name="closed" value="true" />
+      <created>1691864438733</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691864438733</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ACAD-1614 Edit Gradle to create and start the Docker container. Limit memory to 1GB.">
+      <option name="closed" value="true" />
+      <created>1691864496869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691864496869</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ACAD-1614 Create test routine to fill thread pool." />
-    <option name="LAST_COMMIT_MESSAGE" value="ACAD-1614 Create test routine to fill thread pool." />
+    <MESSAGE value="ACAD-1614 Add fillHeap and fillStack methods.Change task to callable so can wait for all to finish before shutting down thread pool." />
+    <MESSAGE value="ACAD-1614 Edit Gradle to create and start the Docker container. Limit memory to 1GB." />
+    <option name="LAST_COMMIT_MESSAGE" value="ACAD-1614 Edit Gradle to create and start the Docker container. Limit memory to 1GB." />
   </component>
 </project>

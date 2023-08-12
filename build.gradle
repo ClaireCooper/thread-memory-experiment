@@ -35,7 +35,7 @@ jar {
     archiveVersion =  '1.0-SNAPSHOT'
 }
 
-task createDockerFile(type: Dockerfile) {
+tasks.register('createDockerFile', Dockerfile) {
     from 'openjdk:8-jre-alpine'
     copyFile jar.archiveFileName.get(), '/net/portswigger/academy/ThreadMemoryExperiment.jar'
     entryPoint 'java'
@@ -44,7 +44,7 @@ task createDockerFile(type: Dockerfile) {
 }
 
 
-task syncJar(type: Copy) {
+tasks.register('syncJar', Copy) {
     dependsOn assemble
     from jar.destinationDirectory
     into "$buildDir/docker"
@@ -55,13 +55,13 @@ compileJava {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-task buildImage(type: DockerBuildImage) {
+tasks.register('buildImage', DockerBuildImage) {
     dependsOn createDockerFile, syncJar
     inputDir = createDockerFile.getDestDir()
     images = ["clairecooper/thread-pool-experiment-gradle-docker:1.0"]
 }
 
-task stopContainer(type: DockerStopContainer) {
+tasks.register('stopContainer', DockerStopContainer) {
     targetContainerId("$ourContainerName")
     onError { exception ->
         if (exception instanceof NotModifiedException) {
@@ -74,22 +74,22 @@ task stopContainer(type: DockerStopContainer) {
     }
 }
 
-task removeContainer(type: DockerRemoveContainer) {
+tasks.register('removeContainer', DockerRemoveContainer) {
     dependsOn stopContainer
     targetContainerId("$ourContainerName")
     onError { exception -> handleError(exception) }
 }
 
-task createContainer(type: DockerCreateContainer) {
+tasks.register('createContainer', DockerCreateContainer) {
     dependsOn buildImage, removeContainer
     targetImageId buildImage.getImageId()
 
     containerName = "$ourContainerName"
-    hostConfig.memory = Integer.toUnsignedLong(1024*1024*1024);
-    hostConfig.memorySwap = Integer.toUnsignedLong(1024*1024*1024);
+    hostConfig.memory = Integer.toUnsignedLong(1024 * 1024 * 1024);
+    hostConfig.memorySwap = Integer.toUnsignedLong(1024 * 1024 * 1024);
 }
 
-task startContainer(type: DockerStartContainer) {
+tasks.register('startContainer', DockerStartContainer) {
     dependsOn createContainer
     targetContainerId("$ourContainerName")
 }

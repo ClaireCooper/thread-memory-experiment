@@ -7,10 +7,10 @@ public class ThreadPoolExperiment {
     public static void main(String[] args) throws InterruptedException {
         int threadPoolSize = 1024;
         int processesToRun = 1024;
-        int megabytesToPutInHeap = 800;
+        int megabytesToPutInHeap = 600;
 
         System.out.println("Test started...");
-        fillHeap(megabytesToPutInHeap);
+        byte[] heapFiller = new byte[megabytesToPutInHeap*1024*1024];
         System.out.println("Filled heap with " + megabytesToPutInHeap +"MB");
         Thread.sleep(10000);
 
@@ -32,7 +32,11 @@ public class ThreadPoolExperiment {
             for (int i = 1; i <= processesToRun; i++) {
                 outcomes.add(executor.submit(threadStackFillerTask));
                 System.out.println("Submitted: " + i);
-                System.out.println(outcomes.get(i-1).get());
+//                System.out.println(outcomes.get(i-1).get());
+//                IMPORTANT when this ^ is uncommented it still crashes,
+//                so it seems that it fills empty slots before closed ones
+//                (because when doing more processes than threads it will
+//                happily replace closed threads' stacks)
                 Thread.sleep(10);
             }
             for (int i = 0; i < processesToRun; i++) {
@@ -60,8 +64,4 @@ public class ThreadPoolExperiment {
         return fillStack(n+1);
     }
 
-    static private void fillHeap(int megabytes)
-    {
-        byte[] theBytes = new byte[megabytes*1024*1024];
-    }
 }

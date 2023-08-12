@@ -6,8 +6,8 @@ import java.util.concurrent.*;
 public class ThreadPoolExperiment {
     public static void main(String[] args) throws InterruptedException {
         int threadPoolSize = 1024;
-        int processesToRun = 1024;
-        int megabytesToPutInHeap = 600;
+        int processesToRun = 2048;
+        int megabytesToPutInHeap = 550;
 
         System.out.println("Test started...");
         byte[] heapFiller = new byte[megabytesToPutInHeap*1024*1024];
@@ -58,7 +58,6 @@ public class ThreadPoolExperiment {
         {
             System.out.println("Filled stack in " + Thread.currentThread().getName());
 //            Thread.sleep(30*1000);
-
             return 0;
         }
         return fillStack(n+1);

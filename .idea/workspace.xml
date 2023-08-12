@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9e46e0-7d93-4f6a-b417-4859e9365a3c" name="Changes" comment="ACAD-1614 Edit Gradle to create and start the Docker container. Limit memory to 1GB.">
+    <list default="true" id="2a9e46e0-7d93-4f6a-b417-4859e9365a3c" name="Changes" comment="ACAD-1614 Change from task to tasks.register.">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/portswigger/academy/ThreadPoolExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/portswigger/academy/ThreadPoolExperiment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,12 +42,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="ThreadPoolExperiment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.portswigger.academy.ThreadPoolExperiment" />
@@ -100,13 +104,31 @@
       <option name="project" value="LOCAL" />
       <updated>1691864496869</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ACAD-1614 Change scope for heap filler.">
+      <option name="closed" value="true" />
+      <created>1691866633503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691866633503</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ACAD-1614 Change from task to tasks.register.">
+      <option name="closed" value="true" />
+      <created>1691866659545</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691866659545</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ACAD-1614 Create test routine to fill thread pool." />
     <MESSAGE value="ACAD-1614 Add fillHeap and fillStack methods.Change task to callable so can wait for all to finish before shutting down thread pool." />
     <MESSAGE value="ACAD-1614 Edit Gradle to create and start the Docker container. Limit memory to 1GB." />
-    <option name="LAST_COMMIT_MESSAGE" value="ACAD-1614 Edit Gradle to create and start the Docker container. Limit memory to 1GB." />
+    <MESSAGE value="ACAD-1614 Change scope for heap filler." />
+    <MESSAGE value="ACAD-1614 Change from task to tasks.register." />
+    <option name="LAST_COMMIT_MESSAGE" value="ACAD-1614 Change from task to tasks.register." />
   </component>
 </project>

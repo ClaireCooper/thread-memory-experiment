@@ -35,11 +35,11 @@ jar {
 }
 
 tasks.register('createDockerFile', Dockerfile) {
-    from 'openjdk:8-jre-alpine'
+    from 'amazoncorretto:17-alpine'//'openjdk:17'//-jre-alpine'
     copyFile jar.archiveFileName.get(), '/net/portswigger/academy/ThreadMemoryExperiment.jar'
     entryPoint 'java'
     defaultCommand '-jar', '/net/portswigger/academy/ThreadMemoryExperiment.jar'
-    environmentVariable 'JAVA_OPTS', '-Xms1009m -Xmx1009m -Xss1m -XX:+UnlockExperimentalVMOptions -XX:+UseZGC'
+    environmentVariable '_JAVA_OPTIONS', '-Xms100m -Xmx1024m -Xss1m -XX:+UseZGC'
 }
 
 

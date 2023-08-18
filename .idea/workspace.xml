@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9e46e0-7d93-4f6a-b417-4859e9365a3c" name="Changes" comment="ACAD-1614 Change from task to tasks.register.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2a9e46e0-7d93-4f6a-b417-4859e9365a3c" name="Changes" comment="ACAD-1614 Change to java 17 not 11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/portswigger/academy/ThreadPoolExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/portswigger/academy/ThreadPoolExperiment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +46,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RunManager">
@@ -120,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691866659545</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ACAD-1614 Change to java 17 not 11">
+      <option name="closed" value="true" />
+      <created>1691868294142</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691868294142</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,6 +136,7 @@
     <MESSAGE value="ACAD-1614 Edit Gradle to create and start the Docker container. Limit memory to 1GB." />
     <MESSAGE value="ACAD-1614 Change scope for heap filler." />
     <MESSAGE value="ACAD-1614 Change from task to tasks.register." />
-    <option name="LAST_COMMIT_MESSAGE" value="ACAD-1614 Change from task to tasks.register." />
+    <MESSAGE value="ACAD-1614 Change to java 17 not 11" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACAD-1614 Change to java 17 not 11" />
   </component>
 </project>
